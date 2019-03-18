@@ -12,6 +12,10 @@ body {
     width: 400px;
     border-color: transparent;
 }
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
 
 .spacer {
     display: inline-block;
@@ -23,7 +27,10 @@ body {
     display: flex;
     justify-content: center;
 }
-
+.list {
+    display: flex;
+    justify-content: center;
+}
 
 .table th {
     text-align: center;

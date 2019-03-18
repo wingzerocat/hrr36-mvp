@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import Generation from './components/Generation.jsx';
+import SelectGen from './components/SelectGeneration.jsx';
 require('bootstrap');
 
 class App extends React.Component {
@@ -55,6 +56,15 @@ class App extends React.Component {
     })
   }
 
+  changeGen(event) {
+    console.log(event.target.value);
+    var num = parseInt(event.target.value);
+
+    this.setState({
+      gen: num
+    })
+  }
+
   render () {
     let tempList = this.state.pokemon;
 
@@ -63,20 +73,25 @@ class App extends React.Component {
     } else if (this.state.gen === 2) {
       tempList = tempList.slice(151, 251);
     } else if (this.state.gen === 3) {
-      tempList = tempList.slice(251, 387);
+      tempList = tempList.slice(251, 386);
     } else if (this.state.gen === 4) {
-      tempList = tempList.slice(387, 494);
+      tempList = tempList.slice(386, 494);
     } else if (this.state.gen === 5) {
-      tempList = tempList.slice(494, 650);
+      tempList = tempList.slice(494, 649);
     } else if (this.state.gen === 6) {
-      tempList = tempList.slice(650, 722);
+      tempList = tempList.slice(649, 721);
     } else if (this.state.gen === 7) {
-      tempList = tempList.slice(722, 808);
+      tempList = tempList.slice(721, 808);
     }
 
     return (
       <div>
-        <Generation pokes={tempList} target={this.state.selectedPoke} selectedPoke={this.selectedPoke.bind(this)}/>
+        <div>
+          <SelectGen changeGen={this.changeGen.bind(this)} />
+        </div>
+        <div className="list">
+          <Generation pokes={tempList} target={this.state.selectedPoke} selectedPoke={this.selectedPoke.bind(this)}/>
+        </div>
       </div>
       
     )
