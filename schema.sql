@@ -5,7 +5,7 @@ CREATE DATABASE pokemon;
 USE pokemon;
 
 CREATE TABLE dex (
-  id float NOT NULL AUTO_INCREMENT,
+  id int(3) ZEROFILL NOT NULL AUTO_INCREMENT,
   name varchar(50) NOT NULL,
   hp int,
   atk int,

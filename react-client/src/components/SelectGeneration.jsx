@@ -12,7 +12,7 @@ const SelectGen = (props) => {
     ]
 
     var genList = GenerationsList.map(function(generation) {
-        return <button className="btn" value={generation.slice(4, 5)} onClick={(e) => props.changeGen(e)}>{generation}</button>
+        return <button className="btn btn-top" value={generation.slice(4, 5)} onClick={(e) => props.changeGen(e)}>{generation}</button>
     })
 
     return (
