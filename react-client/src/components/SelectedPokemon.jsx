@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button, UncontrolledPopover, PopoverHeader, PopoverBody } from 'reactstrap';
 
 const SelectedPokemon = (props) => (
   <div key={props.poke.id}>
@@ -9,13 +8,6 @@ const SelectedPokemon = (props) => (
       { props.poke.name }
     </button>
     </div>
-    {/* <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal" value={props.poke.id} onClick={(e) => props.selectedPoke(e)}>
-      <span className="num">
-        { props.poke.id }
-      </span>
-      
-      { props.poke.name }
-    </button> */}
 
     <div className={"modal fade " + props.target[0].type_1} id="exampleModal" tabIndex="-1" role="dialog">
       <div className="modal-dialog" role="document">
@@ -79,7 +71,6 @@ const SelectedPokemon = (props) => (
                   <td>
                     <div class="progress">
                       <div class="progress-bar hp" role="progressbar" style={{width: (props.target[0].hp/255 * 100) + '%'}}>
-                        <span class="sr-only">70% Complete</span>
                       </div>
                     </div>
                   </td>
@@ -90,7 +81,6 @@ const SelectedPokemon = (props) => (
                   <td>
                     <div class="progress">
                       <div class="progress-bar atk" role="progressbar" style={{width: (props.target[0].atk/255 * 100) + '%'}}>
-                        <span class="sr-only">70% Complete</span>
                       </div>
                     </div>
                   </td>
@@ -101,7 +91,6 @@ const SelectedPokemon = (props) => (
                   <td>
                     <div class="progress">
                       <div class="progress-bar def" role="progressbar" style={{width: (props.target[0].def/255 * 100) + '%'}}>
-                        <span class="sr-only">70% Complete</span>
                       </div>
                     </div>
                   </td>
@@ -112,7 +101,6 @@ const SelectedPokemon = (props) => (
                   <td>
                     <div class="progress">
                       <div class="progress-bar spa" role="progressbar" style={{width: (props.target[0].spa/255 * 100) + '%'}}>
-                        <span class="sr-only">70% Complete</span>
                       </div>
                     </div>
                   </td>
@@ -123,7 +111,6 @@ const SelectedPokemon = (props) => (
                   <td>
                     <div class="progress">
                       <div class="progress-bar spd" role="progressbar" style={{width: (props.target[0].spd/255 * 100) + '%'}}>
-                        <span class="sr-only">70% Complete</span>
                       </div>
                     </div>
                   </td>
@@ -134,7 +121,6 @@ const SelectedPokemon = (props) => (
                   <td>
                     <div class="progress">
                       <div class="progress-bar spe" role="progressbar" style={{width: (props.target[0].spe/255 * 100) + '%'}}>
-                        <span class="sr-only">70% Complete</span>
                       </div>
                     </div>
                   </td>
@@ -145,7 +131,6 @@ const SelectedPokemon = (props) => (
                   <td>
                     <div class="progress">
                       <div class={"progress-bar " + props.target[0].type_1} role="progressbar" style={{width: (props.target[0].total/720 * 100) + '%'}}>
-                        <span class="sr-only">70% Complete</span>
                       </div>
                     </div>
                   </td>
